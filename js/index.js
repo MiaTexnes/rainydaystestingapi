@@ -1,5 +1,3 @@
-
-
 const url = "https://api.noroff.dev/api/v1/rainy-days";
 
 async function getProducts() {
@@ -10,7 +8,7 @@ async function getProducts() {
     }
     const products = await response.json();
 
-    const resultsContainer = document.querySelector("#container");
+    const resultsContainer = document.querySelector("#container-product");
     resultsContainer.innerHTML = "";
 
     const firstThreeProducts = products.slice(0, 3);
@@ -19,7 +17,7 @@ async function getProducts() {
         <h1>${product.title}</h1>
         <p>Price: ${product.price}</p>
         <img src="${product.image}" alt="${product.description}" />
-        <a href="product.html">View Details</a>
+        <a href="product.html"?id=${product.id}>View details</a>
       </div>`;
     });
   } catch (error) {
@@ -31,5 +29,3 @@ async function getProducts() {
 }
 
 getProducts();
-
-
