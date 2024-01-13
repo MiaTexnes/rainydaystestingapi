@@ -2,13 +2,13 @@ import { getQueryStringParam } from "./helpers/getQueryStringParam.js";
 import { url } from "./constants.js";
 
 async function getProduct() {
-  const id = getQueryStringParam("id");
+  const id = "07a7655a-7927-421b-ba6a-b6742d5a75b8";
 
   if (!id) {
     document.location.href = "/";
   }
 
-  const productUrl = `${url}/${"07a7655a-7927-421b-ba6a-b6742d5a75b8"}`;
+  const productUrl = `${url}/${id}`;
 
   try {
     const response = await fetch(productUrl);
