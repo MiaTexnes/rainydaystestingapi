@@ -13,9 +13,9 @@ async function getProducts() {
     const resultsContainer = document.querySelector("#container-product");
     resultsContainer.innerHTML = "";
 
-    const firstThreeProducts = products.slice(3, 6);
+    const threeProducts = products.slice(3, 6);
 
-    firstThreeProducts.forEach(function (product) {
+    threeProducts.forEach(function (product) {
       resultsContainer.innerHTML += `<div class="card">
     <h1>${product.title}</h1>
     <p>Price: ${product.price}</p>

@@ -10,12 +10,19 @@ async function getProducts() {
 
     const products = await response.json();
 
+    // Filter products for gender "female"
+    const femaleProducts = products.filter(
+      (product) => product.gender === "Female"
+    );
+
+    // Get the first three female products
+    const threeFemaleProducts = femaleProducts.slice(0, 3);
+
     const resultsContainer = document.querySelector("#container-product");
     resultsContainer.innerHTML = "";
 
-    const firstThreeProducts = products.slice(0, 3);
-
-    firstThreeProducts.forEach(function (product) {
+    // Iterate over the three female products and add them to the HTML
+    threeFemaleProducts.forEach(function (product) {
       resultsContainer.innerHTML += `<div class="card">
     <h1>${product.title}</h1>
     <p>Price: ${product.price}</p>
