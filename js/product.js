@@ -2,7 +2,7 @@ import { getQueryStringParam } from "./helpers/getQueryStringParam.js";
 import { url } from "./constants.js";
 
 async function getProduct() {
-  const id = "07a7655a-7927-421b-ba6a-b6742d5a75b8";
+  const id = getQueryStringParam("id");
 
   if (!id) {
     document.location.href = "/";
@@ -28,7 +28,9 @@ async function getProduct() {
       <h1>${product.title}</h1>
       <p>Price: ${product.price}</p>
       <img src="${product.image}" alt="${product.description}" />
-      <h2>${product.description}</h2>
+      <h2>Description: ${product.description}</h2>
+      <p>Gender: ${product.gender}</p>
+      <p>Color: ${product.baseColor}</p>
       </div>`;
   } catch (error) {
     console.log(error);

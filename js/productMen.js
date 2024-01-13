@@ -27,7 +27,7 @@ async function getProducts() {
     <h1>${product.title}</h1>
     <p>Price: ${product.price}</p>
     <img src="${product.image}" alt="${product.description}" />
-    <a href="product.html?id=${product.id}">View details</a>
+    <a class="viewDetails" href="product.html?id=${product.id}">View details</a>
   </div>`;
     });
   } catch (error) {

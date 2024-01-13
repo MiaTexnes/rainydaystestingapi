@@ -1,3 +1,4 @@
+@import "apistyles.css";
 * {
   font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
   padding: 0;
@@ -120,69 +121,7 @@ main .lemonsjoen {
   padding-top: 10px;
 }
 
-/*contact form for the contact page*/
-
 /*Product card/container*/
-.card  {
- text-align: center;
- margin-bottom: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 2rem;
-  padding: 1rem;
-  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  border-radius: 10%;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.product-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-size: 30px;
-  text-decoration: none;
-}
-
-.product-card {
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding: 1rem;
-  background-color: #dfe8dd;
-  box-shadow: none;
-  text-align: center;
-  border-radius: 10%;
-  transition: box-shadow 0.3s ease-in-out;
-  flex: 1 0 300px;
-}
-
-.product-card a:link,
-a:visited {
-  color: #000;
-  text-decoration: none;
-}
-
-.product-card:hover {
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.labbedal-card {
-  flex: 1;
-}
-.labbedal-product-page {
-  flex: 1;
-  text-align: center;
-}
-
-.labbedal-product-page h2 {
-  font-size: 25px;
-}
-
-.labbedal-description {
-  font-size: 20px;
-  font-weight: lighter;
-}
 
 .sizing-boxes {
   font-family: "Times New Roman", Times, serif;
@@ -190,27 +129,6 @@ a:visited {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
-.product-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease-in-out;
-  height: 300px;
-  object-fit: contain;
-  object-position: top;
-}
-
-.product-image:hover {
-  transform: scale(1.1);
-}
-
-.product-container h2 {
-  font-size: 50px;
-  text-decoration: none;
-}
-
-/*End produduct container*/
 
 /*Used on multiple pages*/
 .slogan-middle {
