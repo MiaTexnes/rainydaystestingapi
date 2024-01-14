@@ -24,14 +24,29 @@ async function getProduct() {
 
     const resultsContainer = document.querySelector("#container-product");
 
-    resultsContainer.innerHTML = `<div class="card">
+    // Create a dropdown menu for sizes
+    let sizeOptions = "";
+    if (product.sizes && product.sizes.length) {
+      sizeOptions = `<select id="product-sizes" name="sizes">`;
+      for (const size of product.sizes) {
+        sizeOptions += `<option value="${size}">${size}</option>`;
+      }
+      sizeOptions += `</select>`;
+    } else {
+      sizeOptions = `<p>No sizes available</p>`;
+    }
+
+    resultsContainer.innerHTML = `<div class="cardSpecific">
+    <img class="product-image" src="${product.image}" alt="${product.description}" />
+    <div class="product-text">
       <h1>${product.title}</h1>
       <p>Price: ${product.price}</p>
-      <img src="${product.image}" alt="${product.description}" />
       <h2>Description: ${product.description}</h2>
       <p>Gender: ${product.gender}</p>
       <p>Color: ${product.baseColor}</p>
-      </div>`;
+      <p>Size: ${sizeOptions}</p>
+    </div>
+    </div>`;
   } catch (error) {
     console.log(error);
     const resultsContainer = document.querySelector("#container-product");
@@ -40,24 +55,3 @@ async function getProduct() {
 }
 
 getProduct();
-// async function getProduct() {
-//   const response = await fetch(url);
-//   const product = await response.json();
-//   // console.log(response);
-
-//   const resultsContainer = document.querySelector("#container-product");
-
-//   resultsContainer.innerHTML = "";
-
-//   const firstProduct = product.slice(0, 1);
-//   firstProduct.forEach(function (product) {
-//     resultsContainer.innerHTML += `<div class="card" >
-//       <h1>${product.title}</h1>
-//       <p>Price:${product.price}</p>
-//       <img src="${product.image}" alt="${product.description}" />
-//       <h2>${product.description}</h2>
-//     </div>`;
-//   });
-// }
-
-// getProduct();

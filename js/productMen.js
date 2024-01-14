@@ -21,13 +21,12 @@ async function getProducts() {
     const resultsContainer = document.querySelector("#container-product");
     resultsContainer.innerHTML = "";
 
-    // Iterate over the three male products and add them to the HTML
     threeMaleProducts.forEach(function (product) {
       resultsContainer.innerHTML += `<div class="card">
+      <img src="${product.image}" alt="${product.description}" />
     <h1>${product.title}</h1>
-    <p>Price: ${product.price}</p>
-    <img src="${product.image}" alt="${product.description}" />
-    <a class="viewDetails" href="product.html?id=${product.id}">View details</a>
+    <p class="price" >Price: ${product.price}</p>
+    <a class="detailButton" href="product.html?id=${product.id}">View details</a>
   </div>`;
     });
   } catch (error) {

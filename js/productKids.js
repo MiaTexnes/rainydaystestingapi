@@ -17,10 +17,10 @@ async function getProducts() {
 
     threeProducts.forEach(function (product) {
       resultsContainer.innerHTML += `<div class="card">
-    <h1>${product.title}</h1>
-    <p>Price: ${product.price}</p>
     <img src="${product.image}" alt="${product.description}" />
-    <a href="product.html?id=${product.id}">View details</a>
+    <h1>${product.title}</h1>
+    <p class="price" >Price: ${product.price}</p>
+    <a class="detailButton" href="product.html?id=${product.id}">View details</a>
   </div>`;
     });
   } catch (error) {
