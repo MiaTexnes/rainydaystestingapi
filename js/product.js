@@ -17,10 +17,7 @@ async function getProduct() {
       throw new Error("There was an error fetching the product with id: " + id);
     }
 
-    console.log(response);
-
     const product = await response.json();
-    console.log(product);
 
     const resultsContainer = document.querySelector("#container-product");
 
@@ -48,7 +45,6 @@ async function getProduct() {
     </div>
     </div>`;
   } catch (error) {
-    console.log(error);
     const resultsContainer = document.querySelector("#container-product");
     resultsContainer.innerHTML = `<p class="error">${error}</p>`;
   }

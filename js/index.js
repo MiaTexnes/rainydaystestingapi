@@ -1,4 +1,3 @@
-import { getQueryStringParam } from "./helpers/getQueryStringParam.js";
 import { url } from "./constants.js";
 
 async function getProducts() {
