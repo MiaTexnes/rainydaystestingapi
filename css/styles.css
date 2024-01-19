@@ -2,6 +2,7 @@
 @import "top.css";
 @import "contact.css";
 @import "footer.css";
+
 * {
   font-family: "Lato", Verdana, Geneva, Tahoma, sans-serif;
   padding: 0;
@@ -236,6 +237,12 @@ main .lemonsjoen {
   font-style: italic;
   text-align: center;
   margin: 3px 20px 3px 20px;
+}
+
+.product-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
 /*Start media queries*/
